@@ -19,7 +19,11 @@ const handleClickChangeButton = (index) => {
   todoList.value.splice(index, 1);
 };
 const handleClickButton = () => {
-  todoList.value.push(inputValue.value);
+  //todoList.value.push(inputValue.value);
+  const text = inputValue.value;
+  todoList.value.push({
+    text: text, done: false
+  });
   console.log(todoList.value);
 };
 const handleChange = (event) => {
